@@ -15,7 +15,7 @@
 
 // Windows의 min(), max() 함수 사용하지 않음
 #include <winsdkver.h>
-#define MOMINMAX
+#define NOMINMAX
 
 // GDI를 사용하지 않음
 #define NODRAWTEXT
@@ -34,6 +34,7 @@
 // 도움말 사용안함 - Depercated
 #define NOHLEP
 
+// 기능 버전이 오래된 Win32 기능 제외
 #define WIN32_LEAN_AND_MEAN
 
 /* ======================================================= */
@@ -53,7 +54,7 @@
 #include <dxgidebug.h>
 #endif
 
-// C++
+// C++ STL
 #include <algorithm>
 #include <exception>
 #include <memory>
@@ -62,7 +63,7 @@
 // C
 #include <stdio.h>
 
-//
+// XTK complie warning 26812 is disable
 #pragma warning(push)
 #pragma warning(disable:26812)
 

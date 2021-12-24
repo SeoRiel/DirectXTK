@@ -110,8 +110,8 @@ namespace DX
 
 				// 4000 : 1s = 1000ms
 				// 남은 시간이 0.00025초 미만
-				if (static_cast<uint64_t>(std::abs(static_cast<uint64_t>
-					(timeDelta - m_targetElapsedTicks)) < TicksPerSeconds / 4000))
+				if (static_cast<uint64_t>(std::abs(static_cast<int64_t>
+					(timeDelta - m_targetElapsedTicks))) < TicksPerSeconds / 4000)
 				{
 					timeDelta = m_targetElapsedTicks;
 				}
